@@ -55,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
         mAnalysisRunnable.interrupt();
     }
 
-
     private class CollectAppTimeRunnable implements Runnable{
 
         @Override
