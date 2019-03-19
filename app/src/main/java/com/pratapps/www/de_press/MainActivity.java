@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         mHandler = new Handler();
         mEnableAnalysis = true;
-        mAnalysisRunnable = new Thread(new CollectAppTimeRunnable());
+        mAnalysisRunnable = new Thread(new CalculateAppTimeRunnable());
         mAnalysisRunnable.start();
     }
 
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         mAnalysisRunnable.interrupt();
     }
 
-    private class CollectAppTimeRunnable implements Runnable{
+    private class CalculateAppTimeRunnable implements Runnable{
 
         @Override
         public void run() {
